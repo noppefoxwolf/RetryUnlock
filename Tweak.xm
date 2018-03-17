@@ -8,7 +8,7 @@
 
 %hook SBLockScreenViewControllerBase
 -(void)viewDidLoad{
-	%orig(arg1);
+	%orig;
 	UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
 	[self.view addGestureRecognizer:tap];
 }
